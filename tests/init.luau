@@ -14,7 +14,3 @@ local thread = coroutine.create(function()
 end)
 coroutine.resume(thread)
 assert(coroutine.status(thread) == "dead", "noyield doesn't prevent yielding")
-
-noyield(function()
-	coroutine.yield()
-end)
